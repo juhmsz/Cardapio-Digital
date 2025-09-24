@@ -1,0 +1,110 @@
+#include <stdio.h>
+#include <locale.h>
+
+	void exibirMenu () { //Exibe o menu a cada loop 
+		printf(" \n");
+		printf("=============  MENU  ===============\n");
+		printf("PRATO PRINCIPAL:\n");
+		printf("1) Macarrão ao molho branco  R$30\n");
+		printf("2) Espaguete à Carbonara     R$30\n");
+		printf("3) Lasanha Folheada          R$37\n");
+		printf("4) Tortelli                  R$35\n");
+		printf("BEBIDA:\n");
+		printf("5) Soda Italiana             R$15\n");
+		printf("6) Vinho Branco (taça)       R$30\n");
+		printf("7) Drink de Morango          R$25\n");
+		printf("SOBREMESA:\n");
+		printf("8) Petit Gateua              R$20\n");
+		printf("9) Tiramisù                  R$15\n");
+		printf("10) Finalizar\n");
+		printf("====================================\n");
+		printf("Escolha sua opção:\n");
+	}
+
+int main () {
+	
+	setlocale(LC_ALL, "Portuguese"); //Usado para permitir a saída de caracteres especiais no IDE Dev C++
+	
+	int opcao;
+	float conta = 0;
+	float desconto;
+	float conta_final;
+	
+	printf("Seja bem vindo ao cardápio digital do restaurante MAMA MIA!\n");
+	printf("O cardápio conta com opções de\n");
+	printf("Pratos principais\n");
+	printf("Bebidas\n");
+	printf("E Sobremesas\n");
+	
+	do {
+		exibirMenu ();
+		scanf("%d", &opcao);
+	
+	switch (opcao) {
+		case 1:
+			printf("Macarrão ao molho branco adicionado à lista!\n");
+			conta += 30; //Função que adiciona o valor a cada loop na variável "Conta"
+			printf("Conta:R$%.2f", conta);
+			break;
+		case 2:
+			printf("Espaguete à Carbonara adiconado à lista!\n");
+			conta+=30;
+			printf("Conta: R$%.2f", conta);
+			break;
+		case 3:
+			printf("Lasanha Folheada adiconado à lista!\n");
+			conta+=37;
+			printf("Conta: R$%.2f", conta);
+			break;
+		case 4:
+			printf("Tortelli adicionado à lista!\n");
+			conta+=35;
+			printf("Conta:R$%.2f", conta);
+			break;
+		case 5:
+			printf("Soda Italiana adiconado à lista!\n");
+			conta+=15;
+			printf("Conta:R$.2%f", conta);
+			break;
+		case 6:
+			printf("Vinho branco adiconado à lista!\n");
+			conta+=30;
+			printf("Conta:R$%.2f", conta);
+			break;
+		case 7:
+			printf("Drink de Morango adiconado à lista!\n");
+			conta+=25;
+			printf("Conta:R$%.2f", conta);
+			break;
+		case 8:
+			printf("Petit Gateua adiconado à lista!\n");
+			conta+=20;
+			printf("Conta:R$%.2f", conta);
+			break;
+		case 9:
+			printf("Tiramisù adiconado à lista!\n");
+			conta+=15;
+			printf("Conta:R$%.2f", conta);
+			break;	
+		case 10:
+			printf("Pedido finalizado!\n");
+			break;
+		default:
+			printf("Opção inválida. Por favor, procure digitar números segundo as opções do Menu!\n");
+	}
+} while (opcao != 10);
+
+	printf(" \n");
+	printf("Pedido final: \n");
+	if (conta >= 100) {
+		printf("Seu pedido foi maior que R$100, parabéns ganhou 5 porcento de desconto!\n"); //Desconto adicionada a partir de um valor mínimo
+		desconto = (conta * 0,05);
+		conta = (conta - desconto);
+		printf("Valor final:R$%.2f\n", conta);
+	} else {
+		printf("Valor final:R$%.2f\n", conta); //Sem desconto por não atingir o valor minímo
+	}
+	printf(" \n");
+	printf("Agradecemos por escolher o restaurante MAMA MIA! Tenha uma boa refeição e volte sempre.\n");
+	return 0;	
+}
