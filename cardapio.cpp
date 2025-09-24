@@ -5,33 +5,33 @@
 		printf(" \n");
 		printf("=============  MENU  ===============\n");
 		printf("PRATO PRINCIPAL:\n");
-		printf("1) Macarr„o ao molho branco  R$30\n");
-		printf("2) Espaguete ‡ Carbonara     R$30\n");
+		printf("1) Macarr√£o ao molho branco  R$30\n");
+		printf("2) Espaguete √† Carbonara     R$30\n");
 		printf("3) Lasanha Folheada          R$37\n");
 		printf("4) Tortelli                  R$35\n");
 		printf("BEBIDA:\n");
 		printf("5) Soda Italiana             R$15\n");
-		printf("6) Vinho Branco (taÁa)       R$30\n");
+		printf("6) Vinho Branco (ta√ßa)       R$30\n");
 		printf("7) Drink de Morango          R$25\n");
 		printf("SOBREMESA:\n");
 		printf("8) Petit Gateua              R$20\n");
-		printf("9) Tiramis˘                  R$15\n");
+		printf("9) Tiramis√π                  R$15\n");
 		printf("10) Finalizar\n");
 		printf("====================================\n");
-		printf("Escolha sua opÁ„o:\n");
+		printf("Escolha sua op√ß√£o:\n");
 	}
 
 int main () {
 	
-	setlocale(LC_ALL, "Portuguese"); //Usado para permitir a saÌda de caracteres especiais no IDE Dev C++
+	setlocale(LC_ALL, "Portuguese"); //Usado para permitir a sa√≠da de caracteres especiais no IDE Dev C++
 	
 	int opcao;
 	float conta = 0;
 	float desconto;
 	float conta_final;
 	
-	printf("Seja bem vindo ao card·pio digital do restaurante MAMA MIA!\n");
-	printf("O card·pio conta com opÁıes de\n");
+	printf("Seja bem vindo ao card√°pio digital do restaurante MAMA MIA!\n");
+	printf("O card√°pio conta com op√ß√µes de\n");
 	printf("Pratos principais\n");
 	printf("Bebidas\n");
 	printf("E Sobremesas\n");
@@ -42,47 +42,47 @@ int main () {
 	
 	switch (opcao) {
 		case 1:
-			printf("Macarr„o ao molho branco adicionado ‡ lista!\n");
-			conta += 30; //FunÁ„o que adiciona o valor a cada loop na vari·vel "Conta"
+			printf("Macarr√£o ao molho branco adicionado √† lista!\n");
+			conta += 30; //Fun√ß√£o que adiciona o valor a cada loop na vari√°vel "Conta"
 			printf("Conta:R$%.2f", conta);
 			break;
 		case 2:
-			printf("Espaguete ‡ Carbonara adiconado ‡ lista!\n");
+			printf("Espaguete √† Carbonara adiconado √† lista!\n");
 			conta+=30;
 			printf("Conta: R$%.2f", conta);
 			break;
 		case 3:
-			printf("Lasanha Folheada adiconado ‡ lista!\n");
+			printf("Lasanha Folheada adiconado √† lista!\n");
 			conta+=37;
 			printf("Conta: R$%.2f", conta);
 			break;
 		case 4:
-			printf("Tortelli adicionado ‡ lista!\n");
+			printf("Tortelli adicionado √† lista!\n");
 			conta+=35;
 			printf("Conta:R$%.2f", conta);
 			break;
 		case 5:
-			printf("Soda Italiana adiconado ‡ lista!\n");
+			printf("Soda Italiana adiconado √† lista!\n");
 			conta+=15;
 			printf("Conta:R$.2%f", conta);
 			break;
 		case 6:
-			printf("Vinho branco adiconado ‡ lista!\n");
+			printf("Vinho branco adiconado √† lista!\n");
 			conta+=30;
 			printf("Conta:R$%.2f", conta);
 			break;
 		case 7:
-			printf("Drink de Morango adiconado ‡ lista!\n");
+			printf("Drink de Morango adiconado √† lista!\n");
 			conta+=25;
 			printf("Conta:R$%.2f", conta);
 			break;
 		case 8:
-			printf("Petit Gateua adiconado ‡ lista!\n");
+			printf("Petit Gateua adiconado √† lista!\n");
 			conta+=20;
 			printf("Conta:R$%.2f", conta);
 			break;
 		case 9:
-			printf("Tiramis˘ adiconado ‡ lista!\n");
+			printf("Tiramis√π adiconado √† lista!\n");
 			conta+=15;
 			printf("Conta:R$%.2f", conta);
 			break;	
@@ -90,21 +90,21 @@ int main () {
 			printf("Pedido finalizado!\n");
 			break;
 		default:
-			printf("OpÁ„o inv·lida. Por favor, procure digitar n˙meros segundo as opÁıes do Menu!\n");
+			printf("Op√ß√£o inv√°lida. Por favor, procure digitar n√∫meros segundo as op√ß√µes do Menu!\n");
 	}
 } while (opcao != 10);
 
 	printf(" \n");
 	printf("Pedido final: \n");
 	if (conta >= 100) {
-		printf("Seu pedido foi maior que R$100, parabÈns ganhou 5 porcento de desconto!\n"); //Desconto adicionada a partir de um valor mÌnimo
+		printf("Seu pedido foi maior que R$100, parab√©ns ganhou 5 porcento de desconto!\n"); //Desconto adicionada a partir de um valor m√≠nimo
 		desconto = (conta * 0,05);
 		conta = (conta - desconto);
 		printf("Valor final:R$%.2f\n", conta);
 	} else {
-		printf("Valor final:R$%.2f\n", conta); //Sem desconto por n„o atingir o valor minÌmo
+		printf("Valor final:R$%.2f\n", conta); //Sem desconto por n√£o atingir o valor min√≠mo
 	}
 	printf(" \n");
-	printf("Agradecemos por escolher o restaurante MAMA MIA! Tenha uma boa refeiÁ„o e volte sempre.\n");
+	printf("Agradecemos por escolher o restaurante MAMA MIA! Tenha uma boa refei√ß√£o e volte sempre.\n");
 	return 0;	
 }
